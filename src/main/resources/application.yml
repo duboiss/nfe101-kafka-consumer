@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: kafka-consumer
+  datasource:
+    url: jdbc:h2:file:C:\Users\Steven\Documents\IdeaProjects\kafka-consumer\data\addresses
+    username: sa
+    password: password
+    driverClassName: org.h2.Driver
+    continue-on-error: true
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: none
+      id.db_structure_naming_strategy: legacy
+  sql:
+    init:
+      mode: always
+  h2:
+    console.enabled: true
+
+#http://localhost:8080/h2-console
+
+addresses:
+  raw-kafka-topic: addresses
+  kafka-server: 172.17.78.90:9092
